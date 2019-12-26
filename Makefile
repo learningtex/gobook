@@ -6,6 +6,7 @@ go.pdf: go-*.tex ex-*/*.tex src/*.go tab/*.tex fig/*.tex blocksbook.cls go.bib .
 	rm -f go.tex && ln -s go_a4.tex go.tex
 	xelatex go.tex && bibtex go && makeindex go \
 	&& xelatex go.tex && xelatex go.tex
+	mv go.pdf pdf
 
 .fig:	fig/*.svg
 	( cd fig; make all )
