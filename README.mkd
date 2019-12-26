@@ -70,6 +70,30 @@ sudo apt-get install $i -y
 done
 ```
 
+You can copy and paste the following code to your vt100 session to kickoff the chains of many packages installation.
+```
+# tested on Fedora 31
+for i in inkscape \
+gnumeric \
+ttf-droid \
+ttf-dejavu \
+ttf-sazanami-gothic \
+ttf-arphic-ukai \
+texlive-fonts-recommended \
+texlive-extra-utils \
+texlive-xetex \
+texlive-latex-extra \
+texlive-latex-recommended \
+latex-cjk-xcjk \
+git-core \
+make
+inkscape texlive-pdfcrop texlive-collection-langcjk cjkuni-ukai-fonts cjkuni-uming-fonts
+do
+sudo dnf install -y 
+done
+
+```
+
 ### Checking out the `Learning Go`  LaTeX sources.
 
 Using http protocol.
